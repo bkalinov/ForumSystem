@@ -1,0 +1,23 @@
+﻿@model ForumSystem.Models.TopicViewModel
+
+@{
+    ViewData["Title"] = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    <div>
+        <label>Title:</label>
+        @Html.TextAreaFor(c => c.Title, 2, 20, null)
+    </div>
+    <div>
+        <label>Text:</label>
+        @Html.TextAreaFor(c => c.Text, 5, 50, null)
+    </div>
+    <div>
+        <input type="submit" value="Save" />
+    </div>
+}
+
+

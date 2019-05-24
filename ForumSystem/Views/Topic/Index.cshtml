@@ -1,0 +1,12 @@
+﻿@model  IEnumerable<ForumSystem.Models.TopicViewModel>
+<div>
+    @Html.ActionLink("New Topic", "Add", "Topic");
+</div>
+<div>
+    @foreach (var topic in Model)
+    {
+    <div>
+        @topic.Title
+    </div>
+    }
+</div>
